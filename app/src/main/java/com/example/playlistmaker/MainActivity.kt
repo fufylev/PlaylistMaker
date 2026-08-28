@@ -1,43 +1,50 @@
 package com.example.playlistmaker
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        enableEdgeToEdge()
+
         setContentView(R.layout.activity_main)
-        
-        val button1 = findViewById<Button>(R.id.search_button)
 
-        button1.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Нажали на кнопку №1!", Toast.LENGTH_SHORT).show()
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
 
-        val button2 = findViewById<Button>(R.id.media_button)
+        val searchButton = findViewById<Button>(R.id.search_button)
 
-        val button2Listener: View.OnClickListener = object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                Toast.makeText(this@MainActivity, "Нажали на кнопку №2!", Toast.LENGTH_SHORT).show()
-            }
+        searchButton.setOnClickListener {
+            val displayIntent = Intent(this, SearchContentActivity::class.java)
+            startActivity(displayIntent)
         }
 
-        button2.setOnClickListener(button2Listener)
+        val mediaContentButton = findViewById<Button>(R.id.media_button)
 
-        val button3 = findViewById<Button>(R.id.settings_button)
-
-        val button3Listener: View.OnClickListener =
+        val mediaContentButtonListener: View.OnClickListener =
             View.OnClickListener {
-                Toast.makeText(
-                    this@MainActivity,
-                    "Нажали на кнопку №3!",
-                    Toast.LENGTH_SHORT
-                ).show()
+                val displayIntent = Intent(this, MediaContentActivity::class.java)
+                startActivity(displayIntent)
             }
 
-        button3.setOnClickListener(button3Listener)
+        mediaContentButton.setOnClickListener(mediaContentButtonListener)
+
+        val settingsButton = findViewById<Button>(R.id.settings_button)
+
+        settingsButton.setOnClickListener {
+            val displayIntent = Intent(this, SettingsActivity::class.java)
+            startActivity(displayIntent)
+        }
     }
 }
