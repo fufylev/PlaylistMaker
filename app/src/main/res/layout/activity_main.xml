@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/app_name"
-            android:textFontWeight="@dimen/font_weight"
+            android:textFontWeight="@integer/font_weight"
             android:textColor="@color/white"
             android:textSize="@dimen/text_header" />
     </FrameLayout>
@@ -31,6 +31,7 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/search_button"
             android:layout_width="match_parent"
             app:icon="@drawable/search"
             app:iconGravity="textStart"
@@ -48,6 +49,7 @@
             android:textColor="@color/text_black" />
 
         <Button
+            android:id="@+id/media_button"
             android:layout_width="match_parent"
             app:icon="@drawable/media"
             app:iconGravity="textStart"
@@ -65,6 +67,7 @@
             android:textColor="@color/text_black" />
 
         <Button
+            android:id="@+id/settings_button"
             android:layout_width="match_parent"
             app:icon="@drawable/settings"
             app:iconGravity="textStart"
