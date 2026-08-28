@@ -10,14 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/header_height"
         android:layout_gravity="center"
-        android:padding="16dp">
+        android:padding="@dimen/margin_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/app_name"
-            android:textFontWeight="500"
+            android:textFontWeight="@dimen/font_weight"
             android:textColor="@color/white"
             android:textSize="@dimen/text_header" />
     </FrameLayout>
@@ -39,7 +39,7 @@
             android:layout_height="0dp"
             app:cornerRadius="@dimen/corner_radius"
             android:layout_weight="1"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/margin_bottom"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:backgroundTint="@color/white"
@@ -56,7 +56,7 @@
             android:layout_height="0dp"
             app:cornerRadius="@dimen/corner_radius"
             android:layout_weight="1"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="@dimen/margin_bottom"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:backgroundTint="@color/white"
