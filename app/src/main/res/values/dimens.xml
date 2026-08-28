@@ -10,5 +10,5 @@
     <dimen name="icon_padding">8dp</dimen>
     <dimen name="corner_radius">16dp</dimen>
     <dimen name="margin_bottom">16dp</dimen>
-    <dimen name="font_weight">500</dimen>
+    <integer name="font_weight">500</integer>
 </resources>

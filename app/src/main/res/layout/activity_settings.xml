@@ -25,7 +25,7 @@
             android:layout_gravity="center_vertical"
             android:includeFontPadding="false"
             android:text="@string/settings"
-            android:textFontWeight="@dimen/font_weight"
+            android:textFontWeight="@integer/font_weight"
             android:textColor="@color/text_black"
             android:textSize="@dimen/text_header" />
     </LinearLayout>
@@ -42,7 +42,7 @@
             android:layout_gravity="center_vertical"
             android:includeFontPadding="false"
             android:text="@string/dark_theme"
-            android:textFontWeight="@dimen/font_weight"
+            android:textFontWeight="@integer/font_weight"
             android:textColor="@color/text_black"
             android:textSize="@dimen/item_text_size" />
 
@@ -67,7 +67,7 @@
             android:layout_gravity="center_vertical"
             android:includeFontPadding="false"
             android:text="@string/share"
-            android:textFontWeight="@dimen/font_weight"
+            android:textFontWeight="@integer/font_weight"
             android:textColor="@color/text_black"
             android:textSize="@dimen/item_text_size" />
 
@@ -90,7 +90,7 @@
             android:layout_gravity="center_vertical"
             android:includeFontPadding="false"
             android:text="@string/help"
-            android:textFontWeight="@dimen/font_weight"
+            android:textFontWeight="@integer/font_weight"
             android:textColor="@color/text_black"
             android:textSize="@dimen/item_text_size" />
 
@@ -113,7 +113,7 @@
             android:layout_gravity="center_vertical"
             android:includeFontPadding="false"
             android:text="@string/agreement"
-            android:textFontWeight="@dimen/font_weight"
+            android:textFontWeight="@integer/font_weight"
             android:textColor="@color/text_black"
             android:textSize="@dimen/item_text_size" />
 
