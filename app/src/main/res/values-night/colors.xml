@@ -7,5 +7,7 @@
     </color>       <!-- контентные экраны: белый → чёрный -->
     <color name="content_primary">@color/white</color>        <!-- текст/иконки: чёрный → белый -->
     <color name="content_secondary">@color/white</color>     <!-- иконки строк: серые → белые (как в макете) -->
+    <color name="search_field_background">@color/white</color> <!-- фон поля поиска в тёмной теме: белый -->
+    <color name="search_field_icon">@color/black</color>      <!-- лупа: серая → чёрная (на белом поле) -->
 
 </resources>

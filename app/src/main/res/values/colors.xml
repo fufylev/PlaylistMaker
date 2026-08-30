@@ -19,5 +19,10 @@
     <color name="background_surface">@color/white</color>        <!-- фон контентных экранов -->
     <color name="content_primary">@color/black</color>          <!-- основной текст и иконки -->
     <color name="content_secondary">@color/text_gray</color>    <!-- вторичные иконки -->
+    <color name="search_field_background">@color/light_gray</color> <!-- фон поля поиска -->
+    <color name="search_field_text">@color/black</color>          <!-- текст поискового запроса -->
+    <color name="search_field_hint">@color/text_gray</color>      <!-- подсказка поля поиска -->
+    <color name="search_field_icon">@color/text_gray</color>          <!-- иконка лупы -->
+    <color name="search_field_clear_icon">@color/text_gray</color><!-- иконка очистки -->
 
 </resources>

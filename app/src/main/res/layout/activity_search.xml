@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.PlaylistMaker.Screen"
+    android:id="@+id/activity_search_content"
+    tools:context=".SearchActivity"
+    tools:ignore="UseCompoundDrawables">
+
+    <LinearLayout
+        style="@style/Widget.PlaylistMaker.Header"
+        android:layout_marginBottom="@dimen/search_field_spacing">
+
+        <ImageView
+            android:id="@+id/back_button"
+            style="@style/Widget.PlaylistMaker.BackButton"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            style="@style/Widget.PlaylistMaker.ScreenTitle"
+            android:text="@string/search" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/Widget.PlaylistMaker.SearchField">
+
+        <ImageView
+            style="@style/Widget.PlaylistMaker.SearchFieldIcon"
+            android:importantForAccessibility="no"
+            android:src="@drawable/search" />
+
+        <EditText
+            android:id="@+id/search_input"
+            style="@style/Widget.PlaylistMaker.SearchEditText"
+            android:autofillHints=""
+            android:hint="@string/search"
+            tools:ignore="LabelFor" />
+
+        <ImageView
+            android:id="@+id/clear_button"
+            style="@style/Widget.PlaylistMaker.SearchFieldIcon"
+            android:contentDescription="@string/clear_search_query"
+            android:src="@drawable/clear"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
