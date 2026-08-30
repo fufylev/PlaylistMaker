@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/background_main"
     android:id="@+id/main"
+    android:clipChildren="false"
     android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/header_height"
         android:layout_gravity="center"
-        android:padding="@dimen/margin_horizontal">
+        android:paddingHorizontal="@dimen/margin_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="@string/app_name"
-            android:textFontWeight="@integer/font_weight"
             android:textColor="@color/white"
             android:textSize="@dimen/text_header" />
     </FrameLayout>
@@ -29,63 +29,29 @@
         android:layout_weight="1"
         android:layout_marginVertical="@dimen/margin_vertical"
         android:layout_marginHorizontal="@dimen/margin_horizontal"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/search_button"
-            android:layout_width="match_parent"
-            app:icon="@drawable/search"
-            app:iconGravity="textStart"
-            app:iconPadding="@dimen/icon_padding"
-            app:iconTint="@color/text_black"
-            android:layout_height="0dp"
-            app:cornerRadius="@dimen/corner_radius"
-            android:layout_weight="1"
+            style="@style/Widget.PlaylistMaker.Button.Main"
             android:layout_marginBottom="@dimen/margin_bottom"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:backgroundTint="@color/white"
             android:text="@string/search"
-            android:textSize="@dimen/button_text"
-            android:textAllCaps="false"
-            android:textColor="@color/text_black" />
+            app:icon="@drawable/search" />
 
         <Button
             android:id="@+id/media_button"
-            android:layout_width="match_parent"
-            app:icon="@drawable/media"
-            app:iconGravity="textStart"
-            app:iconPadding="@dimen/icon_padding"
-            app:iconTint="@color/text_black"
-            android:layout_height="0dp"
-            app:cornerRadius="@dimen/corner_radius"
-            android:layout_weight="1"
+            style="@style/Widget.PlaylistMaker.Button.Main"
             android:layout_marginBottom="@dimen/margin_bottom"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:backgroundTint="@color/white"
             android:text="@string/media"
-            android:textSize="@dimen/button_text"
-            android:textAllCaps="false"
-            android:textColor="@color/text_black" />
+            app:icon="@drawable/media" />
 
         <Button
             android:id="@+id/settings_button"
-            android:layout_width="match_parent"
-            app:icon="@drawable/settings"
-            app:iconGravity="textStart"
-            app:iconPadding="@dimen/icon_padding"
-            app:iconTint="@color/text_black"
-            android:layout_height="0dp"
-            app:cornerRadius="@dimen/corner_radius"
-            android:layout_weight="1"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:backgroundTint="@color/white"
+            style="@style/Widget.PlaylistMaker.Button.Main"
             android:text="@string/settings"
-            android:textSize="@dimen/button_text"
-            android:textAllCaps="false"
-            android:textColor="@color/text_black" />
+            app:icon="@drawable/settings" />
 
     </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_main">@color/black
+    </color>          <!-- главный экран: синий → чёрный -->
+    <color name="background_surface">@color/black
+    </color>       <!-- контентные экраны: белый → чёрный -->
+    <color name="content_primary">@color/white</color>        <!-- текст/иконки: чёрный → белый -->
+    <color name="content_secondary">@color/white</color>     <!-- иконки строк: серые → белые (как в макете) -->
+
+</resources>

@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue">#3772E7</color>
+
+    <color name="black">#1A1B22</color>
     <color name="white">#FFFFFF</color>
-    <color name="text_black">#1A1B22</color>
+    <color name="blue">#3772E7</color>
+    <color name="blue_light">#9FBBF3</color>
     <color name="text_gray">#AEAFB4</color>
-    <color name="black_icons">#1A1B22</color>
-    <color name="black">#000000</color>
-    <color name="switch_background">#F2F2F2</color>
-    <color name="switch_track">#76EAE0</color>
-    <color name="switch_thumb">#00D6C3</color>
+    <color name="light_gray">#E6E8EB</color>
+    <color name="red">#F56B6C</color>
+    <color name="scrim">#801A1B22</color>
+
+    <color name="slider_track">@color/blue_light</color>
+    <color name="slider_thumb">@color/blue</color>
+
+    <color name="button_ripple">#1F1A1B22</color>
+
+    <color name="background_main">@color/blue</color>            <!-- фон главного экрана -->
+    <color name="background_surface">@color/white</color>        <!-- фон контентных экранов -->
+    <color name="content_primary">@color/black</color>          <!-- основной текст и иконки -->
+    <color name="content_secondary">@color/text_gray</color>    <!-- вторичные иконки -->
+
 </resources>
