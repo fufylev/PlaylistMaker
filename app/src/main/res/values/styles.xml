@@ -111,10 +111,10 @@
         <item name="android:padding">@dimen/search_field_padding</item>
     </style>
 
-    <!-- Иконка внутри поля поиска (лупа/очистка), 24dp. -->
+    <!-- Иконка внутри поля поиска (лупа/очистка), 16dp. -->
     <style name="Widget.PlaylistMaker.SearchFieldIcon" parent="">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/search_field_icon_size</item>
+        <item name="android:layout_height">@dimen/search_field_icon_size</item>
         <item name="android:layout_gravity">center_vertical</item>
     </style>
 

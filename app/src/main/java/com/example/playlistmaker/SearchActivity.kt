@@ -1,8 +1,6 @@
 package com.example.playlistmaker
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
@@ -11,10 +9,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.doAfterTextChanged
+import androidx.core.widget.doOnTextChanged
 
 class SearchActivity : AppCompatActivity() {
 
     private var searchQuery: String = ""
+    private lateinit var searchInput: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +32,7 @@ class SearchActivity : AppCompatActivity() {
             finish()
         }
 
-        val searchInput = findViewById<EditText>(R.id.search_input)
+        searchInput = findViewById(R.id.search_input)
         val clearButton = findViewById<ImageView>(R.id.clear_button)
 
         clearButton.setOnClickListener {
@@ -41,23 +42,16 @@ class SearchActivity : AppCompatActivity() {
             keyboard.hideSoftInputFromWindow(searchInput.windowToken, 0)
         }
 
-        val searchTextWatcher = object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                searchQuery = s?.toString() ?: ""
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                clearButton.visibility = if (s.isNullOrEmpty()) {
-                    View.GONE
-                } else {
-                    View.VISIBLE
-                }
+        searchInput.doOnTextChanged { s, _, _, _ ->
+            searchQuery = s?.toString() ?: ""
+        }
+        searchInput.doAfterTextChanged { s ->
+            clearButton.visibility = if (s.isNullOrEmpty()) {
+                View.GONE
+            } else {
+                View.VISIBLE
             }
         }
-        searchInput.addTextChangedListener(searchTextWatcher)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -68,7 +62,7 @@ class SearchActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         searchQuery = savedInstanceState.getString(SEARCH_QUERY_KEY, "")
-        findViewById<EditText>(R.id.search_input).setText(searchQuery)
+        searchInput.setText(searchQuery)
     }
 
     companion object {
