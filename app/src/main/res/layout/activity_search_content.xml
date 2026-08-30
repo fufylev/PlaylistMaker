@@ -21,6 +21,6 @@
     <TextView
         android:id="@+id/message"
         style="@style/Widget.PlaylistMaker.Message"
-        android:text="Это экран поиска контента!" />
+        android:text="@string/search_screen_placeholder" />
 
 </LinearLayout>
