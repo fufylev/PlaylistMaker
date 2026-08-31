@@ -1,128 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.PlaylistMaker.Screen"
     android:id="@+id/settings"
-    android:orientation="vertical">
+    tools:ignore="UseCompoundDrawables">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/header_height"
-        android:layout_gravity="center"
-        android:padding="@dimen/margin_bottom"
-        android:layout_marginBottom="@dimen/margin_bottom">
+    <LinearLayout style="@style/Widget.PlaylistMaker.Header">
 
         <ImageView
             android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="@dimen/icon_padding"
-            android:src="@drawable/back_button" />
+            style="@style/Widget.PlaylistMaker.BackButton"
+            android:contentDescription="@string/back" />
 
         <TextView
+            style="@style/Widget.PlaylistMaker.ScreenTitle"
+            android:text="@string/settings" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/Widget.PlaylistMaker.SettingRow">
+
+        <TextView
+            style="@style/Widget.PlaylistMaker.SettingLabel"
+            android:text="@string/dark_theme" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/theme_selection"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:includeFontPadding="false"
-            android:text="@string/settings"
-            android:textFontWeight="@integer/font_weight"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/text_header" />
+            app:trackTint="@color/switch_track_tint"
+            app:thumbTint="@color/switch_thumb_tint" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height"
-        android:padding="@dimen/margin_bottom">
+        android:id="@+id/share_setting"
+        style="@style/Widget.PlaylistMaker.SettingRow">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:includeFontPadding="false"
-            android:text="@string/dark_theme"
-            android:textFontWeight="@integer/font_weight"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/item_text_size" />
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:checked="true"
-            android:trackTint="@color/switch_track"
-            android:thumbTint="@color/switch_thumb" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height"
-        android:padding="@dimen/margin_bottom">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:includeFontPadding="false"
-            android:text="@string/share"
-            android:textFontWeight="@integer/font_weight"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/item_text_size" />
+            style="@style/Widget.PlaylistMaker.SettingLabel"
+            android:text="@string/share" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            style="@style/Widget.PlaylistMaker.SettingIcon"
+            android:importantForAccessibility="no"
             android:src="@drawable/share" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height"
-        android:padding="@dimen/margin_bottom">
+        android:id="@+id/support_setting"
+        style="@style/Widget.PlaylistMaker.SettingRow">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:includeFontPadding="false"
-            android:text="@string/help"
-            android:textFontWeight="@integer/font_weight"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/item_text_size" />
+            style="@style/Widget.PlaylistMaker.SettingLabel"
+            android:text="@string/help" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            style="@style/Widget.PlaylistMaker.SettingIcon"
+            android:importantForAccessibility="no"
             android:src="@drawable/help" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/item_height"
-        android:padding="@dimen/margin_bottom">
+        android:id="@+id/agreement_setting"
+        style="@style/Widget.PlaylistMaker.SettingRow">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical"
-            android:includeFontPadding="false"
-            android:text="@string/agreement"
-            android:textFontWeight="@integer/font_weight"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/item_text_size" />
+            style="@style/Widget.PlaylistMaker.SettingLabel"
+            android:text="@string/agreement" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
+            style="@style/Widget.PlaylistMaker.SettingIcon"
+            android:importantForAccessibility="no"
             android:src="@drawable/chevron_right" />
     </LinearLayout>
 </LinearLayout>

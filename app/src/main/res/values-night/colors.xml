@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_main">@color/black
+    </color>          <!-- главный экран: синий → чёрный -->
+    <color name="background_surface">@color/black
+    </color>       <!-- контентные экраны: белый → чёрный -->
+    <color name="content_primary">@color/white</color>        <!-- текст/иконки: чёрный → белый -->
+    <color name="content_secondary">@color/white</color>     <!-- иконки строк: серые → белые (как в макете) -->
+    <color name="search_field_background">@color/white</color> <!-- фон поля поиска в тёмной теме: белый -->
+    <color name="search_field_icon">@color/black</color>      <!-- лупа: серая → чёрная (на белом поле) -->
+    <color name="search_field_text">@color/black</color>       <!-- текст запроса: чёрный (на белом поле) -->
+    <color name="search_field_hint">@color/black</color>       <!-- подсказка: серая → чёрная (на белом поле) -->
+    <color name="search_field_clear_icon">@color/black</color><!-- иконка очистки: серая → чёрная (на белом поле) -->
+
+</resources>
